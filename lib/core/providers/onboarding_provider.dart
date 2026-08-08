@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String prefsKeyOnboardingSeen = 'tc_onboarding_seen';
@@ -21,7 +22,7 @@ class OnboardingSeen {
     return prefs.getBool(prefsKeyOnboardingSeen) ?? false;
   }
 
-  static Future<void> markSeen(Ref ref) async {
+  static Future<void> markSeen(WidgetRef ref) async {
     ref.read(hasSeenOnboardingProvider.notifier).state = true;
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool(prefsKeyOnboardingSeen, true);
