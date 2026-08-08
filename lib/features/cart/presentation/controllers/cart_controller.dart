@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/cart_item.dart';
-import 'cart_providers.dart';
+import '../providers/cart_providers.dart';
 
 /// Holds the live cart as an `AsyncNotifier<List<CartItem>>`. All
 /// mutating methods call through the repository (which persists to
