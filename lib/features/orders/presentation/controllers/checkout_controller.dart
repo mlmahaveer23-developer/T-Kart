@@ -7,7 +7,7 @@ import '../../../cart/presentation/controllers/cart_controller.dart';
 import '../../domain/entities/order.dart';
 import '../../domain/entities/order_item.dart';
 import '../../domain/entities/place_order_input.dart';
-import 'order_providers.dart';
+import '../providers/order_providers.dart';
 
 /// Drives the checkout screen's "Place Order" action. Converts the
 /// current cart + a chosen [Address] into a [PlaceOrderInput], submits
