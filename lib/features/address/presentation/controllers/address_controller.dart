@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/address.dart';
-import 'address_providers.dart';
+import '../providers/address_providers.dart';
 
 class AddressController extends AsyncNotifier<List<Address>> {
   @override
