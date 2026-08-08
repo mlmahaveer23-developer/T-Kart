@@ -84,10 +84,10 @@ final StateProvider<String?> selectedCategoryIdProvider =
 
 // ---- Search ----
 
-final StateProvider<String> searchQueryProvider =
+final AutoDisposeStateProvider<String> searchQueryProvider =
     StateProvider.autoDispose<String>((Ref ref) => '');
 
-final FutureProvider<List<Bundle>> searchResultsProvider =
+final AutoDisposeFutureProvider<List<Bundle>> searchResultsProvider =
     FutureProvider.autoDispose<List<Bundle>>((Ref ref) async {
   final String query = ref.watch(searchQueryProvider).trim();
   if (query.length < 2) return <Bundle>[];
